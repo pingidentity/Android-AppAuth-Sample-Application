@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AppAuth Sample App</string>
+    <string name="app_title">Android AppAuth Sample Application</string>
+
+    // Note: This MUST match the scheme from the OIDC_REDIRECT_URI constant in MainActivity.java
+    <string name="app_redirect_scheme">com.pingidentity.developer.appauth</string>
+
+    <string name="button_label_authorize">Sign In to Application</string>
+    <string name="button_label_refresh">Refresh Access Token</string>
+    <string name="button_label_userinfo">Query UserInfo</string>
+
+    <string name="oauth2_access_token_title">OAuth 2.0 Access Token</string>
+    <string name="oauth2_refresh_token_title">OAuth 2.0 Refresh Token</string>
+    <string name="oidc_id_token_title">OpenID Connect ID Token</string>
+    <string name="oidc_userinfo_title">OpenID Connect UserInfo</string>
+
+    <string name="no_token">{ NO TOKEN PRESENT }</string>
+    <string name="not_authorized">{ NOT AUTHORIZED }</string>
+    <string name="json_error">{ ERROR PARSING JSON }</string>
+
+</resources>
