@@ -24,6 +24,7 @@ import net.openid.appauth.AuthorizationService;
 import net.openid.appauth.AuthorizationServiceConfiguration;
 import net.openid.appauth.AuthorizationServiceDiscovery;
 import net.openid.appauth.CodeVerifierUtil;
+import net.openid.appauth.ResponseTypeValues;
 import net.openid.appauth.TokenRequest;
 import net.openid.appauth.TokenResponse;
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             if (savedInstanceState.containsKey(KEY_AUTH_STATE)) {
                 try {
-                    mAuthState = AuthState.fromJson(savedInstanceState.getString(KEY_AUTH_STATE));
+                    mAuthState = AuthState.jsonDeserialize(savedInstanceState.getString(KEY_AUTH_STATE));
                 } catch (JSONException ex) {
                     Log.e(TAG, "Malformed authorization JSON saved", ex);
                 }
@@ -301,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         AuthorizationRequest authRequest = new AuthorizationRequest.Builder(
                 authServiceConfiguration,
                 OIDC_CLIENT_ID,
-                AuthorizationRequest.RESPONSE_TYPE_CODE,
+                ResponseTypeValues.CODE,
                 Uri.parse(OIDC_REDIRECT_URI))
                 .setScope(OIDC_SCOPE)
                 .setCodeVerifier(codeVerifier, codeVerifier, "plain")

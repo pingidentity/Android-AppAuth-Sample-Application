@@ -3,10 +3,11 @@
     package="com.pingidentity.developer.android_appauth_sample_application">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ping_logo"
         android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
 
         <!-- Callback from authentication screen -->
