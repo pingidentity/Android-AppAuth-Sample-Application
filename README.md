@@ -22,7 +22,7 @@ This sample application has been built using PingFederate 8.0.1 and the OAuth Pl
 ### Android Studio & project configuration
 
 * Open this project (android-appauth-sample-application) in Android Studio
-* Add the [AppAuth library for Android](https://github.com/openid/AppAuth-Android) project to your XCode project
+* Add the [AppAuth library for Android](https://github.com/openid/AppAuth-Android) project to your Android Studio project
   * File > Project Structure > '+' > Import Gradle Project (browse to the AppAuth library)
   * Clean up any dependencies (i.e. comment out com.jfrog.bintray if you don't use bintray)
   * Add the library as a dependency (File > Project Structure > app > Dependencies ('+ Module dependency')
